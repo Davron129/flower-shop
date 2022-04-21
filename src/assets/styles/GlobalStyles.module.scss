@@ -4,6 +4,7 @@ $white: #FFFFFF;
 $white-green: #fbfbfb;
 $light1-green: rgba(70, 163, 88, 0.1);
 $light2-green: rgba(70, 163, 88, 0.2);
+$light3-green: rgba(70, 163, 88, 0.3);
 $light5-green: rgba(70, 163, 88, 0.5);
 $header-text: #3d3d3d;
 
@@ -16,14 +17,6 @@ body {
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
-}
-
-img {
-    width: 100%;
-}
-
-svg {
-    width: 100%;
 }
 
 button, input {
@@ -56,3 +49,6 @@ ul {
     cursor: pointer;
 }
 
+button {
+    cursor: pointer;
+}

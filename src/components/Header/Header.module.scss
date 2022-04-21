@@ -1,1 +1,87 @@
 @import '../../assets/styles/GlobalStyles.module.scss';
+
+.header {
+    &__container {
+        padding: 68px 0 85px 41px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+        background: linear-gradient(97.77deg, rgba(245, 245, 245, 0.5) -23.46%, rgba(245, 245, 245, 0.5) 107.51%);
+
+    }
+    
+    .container {
+        :global(.swiper-pagination-bullet) {
+            background-color: $light3-green;
+        }
+
+        :global(.swiper-pagination-bullet-active) {
+            background-color: $green;
+        }
+    }
+
+    &__content {
+        margin-bottom: 44px;
+    }
+
+    .welcome__text {
+        margin-bottom: 7px;
+        color: $header-text;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    .motto {
+        margin-bottom: 5px;
+        font-weight: 900;
+        font-size: 70px;
+        line-height: 70px;
+        text-transform: uppercase;
+        color: $header-text;
+
+        .green {
+            color: $green;
+        }
+    }
+
+    .content {
+        font-size: 14px;
+        line-height: 24px;
+        color: #727272;
+    }
+
+    &__btn {
+        padding: 10px 26px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        border-radius: 6px;
+        background-color: $green;
+        color: $white;
+    }
+
+    .header__right {
+        height: 100%;
+        z-index: 0;
+
+        .header__img1 {
+            width: 135px;
+            height: 135px;
+            bottom: 17px;
+            right: 317px;
+        }
+
+        .header__img2 {
+            width: 518px;
+            bottom: -20px;
+            right: -11px;
+        }
+
+        img {
+            position: absolute;
+        }
+    }
+
+}
