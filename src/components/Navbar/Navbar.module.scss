@@ -1,0 +1,66 @@
+@import '../../assets/styles/GlobalStyles.module.scss';
+
+.nav {
+    margin: 8px 0;
+
+    .container {
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 0.3px solid $light5-green;
+    }
+
+    &__logo {
+        width: 150px;
+    }
+
+    &__menu {
+        display: flex;
+        gap: 50px;
+    }
+    
+    &__item {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        border-bottom: 3px solid $green;
+    }
+
+    &__link {
+        font-size: 16px;
+        line-height: 20px;
+        color: $header-text;
+
+        &.active {
+            font-weight: 700;
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        
+        .search {
+            width: 20px;
+        }
+
+        .basket {
+            width: 24px;
+        }
+
+        .login {
+            span {
+                display: inline-block;
+            }
+        }
+        
+        .login__icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 4px;
+        }
+
+    }
+}
