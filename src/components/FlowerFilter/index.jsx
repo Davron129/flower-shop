@@ -1,6 +1,15 @@
+import { useState } from 'react';
 import Styles from './FlowerFilter.module.scss';
+import { Box, Slider } from '@mui/material';
+
 
 const FlowerFilter = () => {
+    const [value, setValue] = useState([20, 37]);
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
     return (
         <section className={Styles.flowerFilter}>
             <div className={Styles.container}>
@@ -53,7 +62,16 @@ const FlowerFilter = () => {
                             <span>Price Range</span>
                         </div>
                         <div className={Styles.priceRange}>
-                            
+                        <Box sx={{ width: 300 }}>
+                            <Slider
+                                getAriaLabel={() => 'Temperature range'}
+                                value={value}
+                                onChange={handleChange}
+                                valueLabelDisplay="auto"
+                                
+                                // getAriaValueText={valuetext}
+                            />
+                        </Box>
                         </div>
                     </div>
                 </aside>
