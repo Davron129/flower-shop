@@ -1,0 +1,55 @@
+@import '../../assets/styles/GlobalStyles.module.scss';
+
+.flowerFilter {
+    .container {
+        display: grid;
+        grid-template-columns: 310px auto;
+        grid-column-gap: 50px;
+    }
+}
+
+.sideFilter {
+    padding: 14px 20px 19px 18px;
+    background-color: #FBFBFB;
+
+    .menu__name {
+        margin-bottom: 7px;
+        color: $header-text;
+        font-size: 18px;
+        line-height: 16px;
+        font-weight: 700;
+    }
+
+    .menu__wrapper {
+        margin-bottom: 36px;
+    }
+
+    .menu {
+        padding-left: 12px;
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+            line-height: 40px;
+            
+            &.active {
+                color: $green;
+                font-weight: 700;
+            }
+
+            
+        }
+    }
+
+    .priceRange {
+        position: relative;
+        
+        .input__range {
+            width: 100%;
+            position: absolute;
+        }
+    }    
+
+}

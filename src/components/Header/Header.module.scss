@@ -1,6 +1,8 @@
 @import '../../assets/styles/GlobalStyles.module.scss';
 
 .header {
+    margin-bottom: 46px;
+
     &__container {
         padding: 68px 0 85px 41px;
         display: grid;
