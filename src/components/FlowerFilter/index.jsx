@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Styles from './FlowerFilter.module.scss';
 import { Box, Slider } from '@mui/material';
+import Header from './Header';
 
 
 const FlowerFilter = () => {
@@ -103,7 +104,7 @@ const FlowerFilter = () => {
                 </aside>
 
                 <div className={Styles.filter__result}>
-
+                    <Header />
                 </div>
             </div>
         </section>

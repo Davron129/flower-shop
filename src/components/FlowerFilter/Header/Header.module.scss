@@ -1,0 +1,30 @@
+@import '../../../assets/styles/GlobalStyles.module.scss';
+
+.header {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    color: #3D3D3D;
+
+    &__tab {
+        display: flex;
+        column-gap: 35px;
+
+        .tab__item {
+            cursor: pointer;
+            font-size: 15px;
+            line-height: 16px;
+
+            &.active {
+                padding-bottom: 7px;
+                color: $green;
+                font-weight: 700;
+                border-bottom: 2px solid $green;
+            }
+        }
+    }
+}
+
