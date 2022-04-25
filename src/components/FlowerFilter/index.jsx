@@ -4,7 +4,7 @@ import { Box, Slider } from '@mui/material';
 
 
 const FlowerFilter = () => {
-    const [value, setValue] = useState([20, 37]);
+    const [value, setValue] = useState([39, 1230]);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -62,17 +62,43 @@ const FlowerFilter = () => {
                             <span>Price Range</span>
                         </div>
                         <div className={Styles.priceRange}>
-                        <Box sx={{ width: 300 }}>
-                            <Slider
-                                getAriaLabel={() => 'Temperature range'}
-                                value={value}
-                                onChange={handleChange}
-                                valueLabelDisplay="auto"
-                                
-                                // getAriaValueText={valuetext}
-                            />
-                        </Box>
+                            <Box sx={{ width: "calc(100% - 20px)" }}>
+                                <Slider
+                                    getAriaLabel={() => 'Temperature range'}
+                                    value={value}
+                                    onChange={handleChange}
+                                    valueLabelDisplay="auto"
+                                    min={39}
+                                    max={1500}
+                                />
+                            </Box>
+                            <div className={Styles.price__amount}>
+                                <span>Price: </span>
+                                <span className={Styles.amount}> {`$${value[0]} - $${value[1]}`} </span>
+                            </div>
+                            <div className={Styles.filter__btn}>
+                                <button>Filter</button>
+                            </div>
                         </div>
+                    </div>
+                    <div className={Styles.menu__wrapper}>
+                        <div className={Styles.menu__name}>
+                            <span>Size</span>
+                        </div>
+                        <ul className={Styles.menu}>
+                            <li className={`${Styles.item} ${Styles.active}`}>
+                                <span className={Styles.item__name}>Small</span>
+                                <span className={Styles.item__count}>(119)</span>
+                            </li>
+                            <li className={Styles.item}>
+                                <span className={Styles.item__name}>Medium</span>
+                                <span className={Styles.item__count}>(86)</span>
+                            </li>
+                            <li className={Styles.item}>
+                                <span className={Styles.item__name}>Large</span>
+                                <span className={Styles.item__count}>(78)</span>
+                            </li>
+                        </ul>
                     </div>
                 </aside>
 
