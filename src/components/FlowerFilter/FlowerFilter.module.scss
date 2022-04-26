@@ -81,3 +81,10 @@
     }
 
 }
+
+.card__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 300px) );
+    grid-column-gap: 33px;
+    grid-row-gap: 58px;
+}

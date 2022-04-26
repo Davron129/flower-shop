@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Styles from './FlowerFilter.module.scss';
 import { Box, Slider } from '@mui/material';
 import Header from './Header';
+import Card from '../Card';
 
 
 const FlowerFilter = () => {
@@ -105,6 +106,20 @@ const FlowerFilter = () => {
 
                 <div className={Styles.filter__result}>
                     <Header />
+                    <div className={Styles.card__wrapper}>
+                        <Card />
+                        <Card />
+                        <Card />
+                        <Card />
+                        <Card />    
+                        <Card />
+                        <Card />
+                        <Card />
+                        <Card />
+                        <Card />
+                        <Card />
+                        <Card />
+                    </div>
                 </div>
             </div>
         </section>

@@ -1,0 +1,88 @@
+@import '../../assets/styles/GlobalStyles.module.scss';
+
+.card {
+    .card__body {
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            width: 0;
+            height: 1px;
+            background-color: $green;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &:hover::before {
+            width: 100%;
+            transition: .3s ease-in-out;
+        }
+
+        .card__img {
+            height: 300px;
+            min-width: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: #FBFBFB;
+            overflow: hidden;
+
+            &:hover {
+                .card__actions {
+                    bottom: 0px;
+                    transition: .3s ease-in-out;
+                }
+            }
+            
+            .card__actions {
+                position: absolute;
+                bottom: -40px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: .3s ease-in-out;
+    
+                &.card__active {
+                    bottom: 0px;
+                }
+
+                .icon {
+                    width: 35px;
+                    height: 35px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    svg {
+                        width: 20px;
+                    }
+                }
+            }
+        }
+
+
+        .card__content {
+            padding: 12px 0;
+
+            .item__name {
+                margin-bottom: 6px;
+                font-size: 16px;
+                line-height: 16px;
+                color: $header-text;
+            }
+
+            .item__price {
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 16px;
+                color: $green;
+            }
+        }
+    }
+}
