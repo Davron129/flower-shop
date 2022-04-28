@@ -1,0 +1,38 @@
+@import '../../../assets/styles/GlobalStyles.module.scss';
+
+.pagination {
+    display: flex;
+    justify-content: end;
+    
+    &__wrapper {
+        display: flex;
+        column-gap: 10px;
+
+        .pagination__element {
+            width: 35px;
+            height: 35px;
+            border: 1px solid #E5E5E5;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            span {
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 16px;
+            }
+
+            &:hover {
+                background-color: $green;
+                border-color: $green;
+
+                span {
+                    font-weight: 700;
+                    color: #E5E5E5;
+                }
+            }
+        }
+    }
+}

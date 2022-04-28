@@ -83,6 +83,7 @@
 }
 
 .card__wrapper {
+    margin-bottom: 58px;
     display: grid;
     grid-template-columns: repeat(3, minmax(250px, 300px) );
     grid-column-gap: 33px;

@@ -3,6 +3,7 @@ import Styles from './FlowerFilter.module.scss';
 import { Box, Slider } from '@mui/material';
 import Header from './Header';
 import Card from '../Card';
+import Pagination from './Pagination';
 
 
 const FlowerFilter = () => {
@@ -120,6 +121,8 @@ const FlowerFilter = () => {
                         <Card />
                         <Card />
                     </div>
+
+                    <Pagination pageCount={4} />
                 </div>
             </div>
         </section>
