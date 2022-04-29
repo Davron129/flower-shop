@@ -1,0 +1,86 @@
+@import '../../assets/styles/GlobalStyles.module.scss';
+
+.findMore {
+    padding-top: 73px;
+    padding-bottom: 70px;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 28px;
+    }
+}
+
+.card {
+    background-color: #fbfbfb;
+
+    &__wrapper {
+        padding: 37px 30px 46px 30px;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        overflow: hidden;
+    }
+
+    &__body {
+        width: 55%;
+    }
+
+    &__title {
+        margin-bottom: 8px;
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: right;
+        text-transform: uppercase;
+        color: #3D3D3D;
+    }
+
+    &__description {
+        margin-bottom: 20px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: right;
+        color: #727272;
+    }
+
+    &__btn {
+        width: 140px;
+        height: 40px;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $green;
+        color: #FFFFFF;
+        border-radius: 6px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+
+        .icon {
+            width: 18px;
+            height: 16px;
+            margin-left: 4px;
+        }
+    }
+
+    .round {
+        width: 256px;
+        height: 256px;
+        position: absolute;
+        border: 1px solid $green;
+        border-radius: 50%;
+
+        &.round1 {
+            left: -199px;
+            bottom: -140px;
+        }
+
+        &.round2 {
+            left: -191px;
+            bottom: -148px;
+        }
+    }
+}
