@@ -1,12 +1,17 @@
 import { useState } from 'react';
-import Styles from './FlowerFilter.module.scss';
+import { useSelector } from 'react-redux';
 import { Box, Slider } from '@mui/material';
-import Header from './Header';
+
 import Card from '../Card';
+import Header from './Header';
 import Pagination from './Pagination';
+import { sidebarItemsSelector } from '../../store/slices/sidebarItems';
+
+import Styles from './FlowerFilter.module.scss';
 
 
 const FlowerFilter = () => {
+    const sidebarItems = useSelector(sidebarItemsSelector);
     const [value, setValue] = useState([39, 1230]);
 
     const handleChange = (event, newValue) => {
@@ -22,42 +27,14 @@ const FlowerFilter = () => {
                             <span>Categories</span>
                         </div>
                         <ul className={Styles.menu}>
-                            <li className={`${Styles.item} ${Styles.active}`}>
-                                <span className={Styles.item__name}>House Plants</span>
-                                <span className={Styles.item__count}>(33)</span>
-                            </li>
-                            <li className={Styles.item}>
-                                <span className={Styles.item__name}>House Plants</span>
-                                <span className={Styles.item__count}>(33)</span>
-                            </li>
-                            <li className={Styles.item}>
-                                <span className={Styles.item__name}>House Plants</span>
-                                <span className={Styles.item__count}>(33)</span>
-                            </li>
-                            <li className={`${Styles.item} ${Styles.active}`}>
-                                <span className={Styles.item__name}>House Plants</span>
-                                <span className={Styles.item__count}>(33)</span>
-                            </li>
-                            <li className={Styles.item}>
-                                <span className={Styles.item__name}>House Plants</span>
-                                <span className={Styles.item__count}>(33)</span>
-                            </li>
-                            <li className={Styles.item}>
-                                <span className={Styles.item__name}>House Plants</span>
-                                <span className={Styles.item__count}>(33)</span>
-                            </li>
-                            <li className={`${Styles.item} ${Styles.active}`}>
-                                <span className={Styles.item__name}>House Plants</span>
-                                <span className={Styles.item__count}>(33)</span>
-                            </li>
-                            <li className={Styles.item}>
-                                <span className={Styles.item__name}>House Plants</span>
-                                <span className={Styles.item__count}>(33)</span>
-                            </li>
-                            <li className={Styles.item}>
-                                <span className={Styles.item__name}>House Plants</span>
-                                <span className={Styles.item__count}>(33)</span>
-                            </li>
+                            {
+                                sidebarItems.data.map((item, index) => (
+                                    <li className={`${Styles.item} ${ index === 0 && Styles.active}`} key={ item.name }>
+                                        <span className={Styles.item__name}>{ item.name }</span>
+                                        <span className={Styles.item__count}>({ item.amount })</span>
+                                    </li>
+                                ))
+                            }
                         </ul>
                     </div>
                     <div className={Styles.menu__wrapper}>

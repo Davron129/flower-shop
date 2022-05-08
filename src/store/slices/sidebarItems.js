@@ -47,6 +47,6 @@ export const sidebarItemsSlice = createSlice({
     reducers: {}
 })
 
-const sidebarItemsSelector = (state) => state.sidebarItems;
+export const sidebarItemsSelector = (state) => state.sidebarItems;
 
-export default sidebarItems.reducer;
+export default sidebarItemsSlice.reducer;
