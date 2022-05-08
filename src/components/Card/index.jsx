@@ -38,10 +38,10 @@ function Card() {
 
             <div className={`${Styles.card__actions} ${hasAction ? Styles.card__active : ""}`}>
               <div className={Styles.icon} onClick={() => handleSave()}>
-                <BasketIcon fill={isSaved && "#46A358"} />
+                <BasketIcon fill={isSaved ? "#46A358" : "#000"} />
               </div>
               <div className={Styles.icon + " " + Styles.liked} onClick={() => handleLike()}>
-                <SaveIcon fill={isLiked && "red"} />
+                <SaveIcon fill={isLiked ? "red" : "#000"} />
               </div>
               <div className={Styles.icon}>
                 <SearchIcon />
