@@ -1,0 +1,56 @@
+@import '../../assets/styles/GlobalStyles.module.scss';
+
+.blogPost {
+    padding-top: 70px;
+    padding-bottom: 50px;
+
+    .section__title {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 16px;
+        text-align: center;
+        color: #3D3D3D;
+    }
+
+    .card__wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 44px;
+    }
+}
+
+.card {
+    &__img {
+        height: 195px;
+        object-fit: fill;
+        overflow: hidden;
+    }
+
+    &__content {
+        padding: 9px 13px 13px 13px;
+        background-color: #FBFBFB;
+
+        .card__data {
+            margin-bottom: 4px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            color: $green;
+        }
+
+        .title {
+            margin-bottom: 4px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 26px;
+            color: $header-text;
+        }
+
+        .description {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            color: #727272;
+        }
+    }
+}
