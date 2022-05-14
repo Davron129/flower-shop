@@ -85,18 +85,11 @@ const FlowerFilter = () => {
                 <div className={Styles.filter__result}>
                     <Header />
                     <div className={Styles.card__wrapper}>
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />    
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
+                        {
+                            new Array(12).fill(0).map((el, index) => (
+                                <Card key={index} />
+                            ))
+                        }
                     </div>
 
                     <Pagination pageCount={4} />
