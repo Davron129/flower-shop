@@ -1,4 +1,5 @@
 import CardImg from '../../assets/images/01.png';
+import { ReactComponent as ArrowRight } from '../../assets/icons/arrowRight.svg';
 import Styles from './BlogPost.module.scss';
 
 function Card() {
@@ -6,7 +7,7 @@ function Card() {
     <div className={Styles.card}>
         <div className={Styles.card__body}>
             <div className={Styles.card__img}>
-                <img src={CardImg} alt="Flower photo" />
+                <img src={CardImg} alt="Flower" />
             </div>
 
             <div className={Styles.card__content}>
@@ -19,6 +20,12 @@ function Card() {
                 </div>
                 <div className={Styles.description}>
                     <span>Cacti are succulents are easy care plants for any home or patio. </span>
+                </div>
+                <div className={Styles.read_more}>
+                    <span>Read More</span>
+                    <div className={Styles.icon}>
+                        <ArrowRight />
+                    </div>
                 </div>
 
             </div>

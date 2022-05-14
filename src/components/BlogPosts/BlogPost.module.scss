@@ -56,10 +56,47 @@
         }
 
         .description {
+            margin-bottom: 9px;
             font-weight: 400;
             font-size: 14px;
             line-height: 22px;
             color: #727272;
+        }
+
+        .read_more {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            transition: .3s ease;
+
+            span {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                color: #3D3D3D;
+            }
+
+            .icon {
+                width: 16px;
+                height: 16px;
+                margin-left: 6px;
+
+                svg {
+                    fill: #3D3D3D;
+                }
+            }
+
+            &:hover {
+                span {
+                    color: $green;
+                }
+
+                .icon {
+                    svg {
+                        fill: $green;
+                    }
+                }
+            }
         }
     }
 }
