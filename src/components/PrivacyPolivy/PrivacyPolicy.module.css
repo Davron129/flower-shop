@@ -1,0 +1,11 @@
+.privacy__policy {
+    height: 50px;
+    padding-top: 8px;
+    text-align: center;
+}
+
+.privacy__policy span {
+    font-size: 14px;
+    line-height: 30px;
+    color: #3D3D3D;
+}

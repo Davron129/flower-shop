@@ -34,7 +34,7 @@ function Card() {
     <div className={Styles.card}>
         <div className={Styles.card__body + " " + Styles.active}>
           <div className={Styles.card__img} onDoubleClick={() => handleLike()}>
-            <img src={ Flower1 } alt="Flower 1" />
+            <img src={ "https://picsum.photos/600" } alt="Flower 1" />
 
             <div className={`${Styles.card__actions} ${hasAction ? Styles.card__active : ""}`}>
               <div className={Styles.icon} onClick={() => handleSave()}>

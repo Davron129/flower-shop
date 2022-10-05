@@ -1,6 +1,16 @@
 @import '../../assets/styles/GlobalStyles.module.scss';
 
 .card {
+    box-shadow: 0px 6px 20px rgba(210, 210, 210, 0.25);
+    transition: .3s linear;
+    border-radius: 16px;
+    overflow: hidden;
+
+    &:hover {
+        box-shadow: 0px 6px 20px rgba(210, 210, 210, 0.5);
+        transition: .3s linear;
+    }
+
     .card__body {
         position: relative;
         cursor: pointer;
@@ -22,14 +32,21 @@
         }
 
         .card__img {
-            height: 300px;
-            min-width: 250px;
+            width: 100%;
+            aspect-ratio: 16/9;
+            padding-top: 1px;
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
             background-color: #FBFBFB;
             overflow: hidden;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
 
             &:hover {
                 .card__actions {
@@ -68,7 +85,7 @@
 
 
         .card__content {
-            padding: 12px 0;
+            padding: 12px;
 
             .item__name {
                 margin-bottom: 6px;

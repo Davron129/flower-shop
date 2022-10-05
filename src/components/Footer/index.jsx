@@ -1,5 +1,6 @@
 import Styles from './Footer.module.css'
 import Logo from '../../assets/images/Logo.png'
+import PrivacyPolicy from '../PrivacyPolivy'
 
 const Footer = () => {
     return (
@@ -97,6 +98,7 @@ const Footer = () => {
                     </div>
 
                 </div>
+                <PrivacyPolicy />
             </div>
         </div>
     )
